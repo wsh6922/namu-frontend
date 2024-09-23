@@ -1,0 +1,67 @@
+:root {
+  --mainBackground-color: #fff;
+  --subBackground100: #cdc0b1;
+  --subBackground200: #afa395;
+  --subBackground300: #81887c;
+  --subBackground400: #afa7a2;
+  --subBackground500: #a6afa2;
+
+  --white: #fff;
+  --black: #000;
+  --black100: #2b2b2b;
+  --black200: #434343;
+  --black300: #686868;
+  --black400: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* 요소의 위치를 상대적으로 설정하여 자식 요소의 절대 위치를 기준점으로 삼습니다 */
+  position: relative;
+  /* 가로 방향 오버플로를 숨기고, 세로 방향 오버플로는 자동으로 스크롤바를 표시합니다 */
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* 박스 모델의 크기를 'border-box'로 설정하여 패딩과 보더를 포함한 전체 크기를 계산합니다 */
+  box-sizing: border-box;
+  /* 요소의 최소 너비를 300픽셀로 설정하여 너무 좁아지지 않도록 합니다 */
+  min-width: 300px;
+  /* 요소의 최소 높이를 부모 요소의 100%로 설정합니다 */
+  min-height: 100%;
+  /* 요소의 배경색을 흰색(#fff)으로 설정합니다 */
+  background-color: #fff;
+  /* 터치스크린 장치에서 기본 터치 동작을 제한하여 조작을 최적화합니다 */
+  touch-action: manipulation;
+  /* 모바일 브라우저에서 터치할 때 나타나는 하이라이트 색상을 투명하게 설정하여 보이지 않게 합니다 */
+  -webkit-tap-highlight-color: transparent;
+  /* iOS 장치에서 스크롤 동작을 부드럽게 설정합니다 */
+  -webkit-overflow-scrolling: touch;
+  /* 모바일 브라우저에서 텍스트 크기 조정을 비활성화합니다 (각 브라우저별 프리픽스 포함) */
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* 텍스트의 줄 간격을 1.625배로 설정하여 가독성을 높입니다 */
+  line-height: 1.625;
+  /* 스크롤 동작을 부드럽게 설정합니다 */
+  scroll-behavior: smooth;
+}
+
+body {
+  /* 텍스트 렌더링을 속도에 최적화하여 브라우저가 텍스트를 빠르게 렌더링하도록 지시합니다 */
+  text-rendering: optimizeSpeed;
+  /* 모바일 브라우저에서 텍스트 크기 조정을 비활성화하여 사용자가 확대/축소할 때 텍스트 크기를 변경하지 않도록 합니다 */
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* 요소의 최소 높이를 뷰포트 높이의 100%로 설정하여, 요소가 뷰포트 전체 높이를 차지하도록 합니다 */
+  min-height: 100vh;
+  /* 배경색을 흰색(#fff)으로 설정합니다 */
+  background-color: #fff;
+  /* 가로 방향 오버플로를 숨겨서 요소의 내용이 가로로 넘칠 경우 보이지 않게 합니다 */
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-size: 1rem;
+}

@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+// css reset
+html,
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+    -webkit-appearance: none;
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1rem;
+    padding: calc(.375em - 1px) calc(.625em - 1px);
+    line-height: 1.5;
+    vertical-align: top;
+}
+
+// 폰트 초기화
+body,
+button,
+input,
+select,
+table,
+textarea {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, Helvetica Neue, Segoe UI, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+}
+
+// 링크 초기화
+a,
+a:hover,
+a:focus {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+// 스타일 초기화
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+em,
+address {
+  font-style: normal;
+}
+
+strong {
+  font-weight: normal;
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+}
+
+span {
+  font-weight: inherit;
+  font-style: inherit;
+}
+
+button {
+  cursor:pointer;
+  -webkit-appearance: none;
+  background-color: #fff;
+  color: #363636;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: top;
+  font-size: 1rem;
+  border-radius: 4px;
+  box-shadow: none;
+  white-space: nowrap;
+  user-select: none;
+}

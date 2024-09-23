@@ -1,0 +1,71 @@
+// 양쪽 정렬
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// 중앙 정렬
+@mixin position-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 상단 고정
+@mixin position-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+// 커스텀
+// 가운데 정렬
+@mixin flex-center($justify: true) {
+    display: flex;
+    align-items: center;
+    
+    @if $justify {
+        justify-content: center;
+    }
+    
+}
+
+// 헤더 고정
+@mixin header__nav--fixed {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+// <a> underline 삭제
+@mixin text-no-underline-cursor-pointer {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+// header 버튼 설정
+@mixin header__button--set {
+    padding: 8px;
+    margin-bottom: unset;
+    border: 1px solid #dbdbdb;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    height: auto;
+    line-height: 1;
+}
+
+// visually-hidden 설정
+@mixin visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
