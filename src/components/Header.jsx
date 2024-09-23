@@ -21,17 +21,17 @@ const Header = () => {
                                 </div>
                                 <div className="is-hoverable category_menu_content--no-list-style navbar-item">
                                     <a href=" " className="navbar-item">
+                                        <span>Study</span>
+                                    </a>
+                                </div>
+                                <div className="is-hoverable category_menu_content--no-list-style navbar-item">
+                                    <a href=" " className="navbar-item">
                                         <span>Resume</span>
                                     </a>
                                 </div>
                                 <div className="is-hoverable category_menu_content--no-list-style navbar-item">
                                     <a href=" " className="navbar-item">
                                         <span>Tags</span>
-                                    </a>
-                                </div>
-                                <div className="is-hoverable category_menu_content--no-list-style navbar-item">
-                                    <a href=" " className="navbar-item">
-                                        <span>Books</span>
                                     </a>
                                 </div>
                             </div>

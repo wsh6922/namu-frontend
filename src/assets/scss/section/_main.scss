@@ -1,0 +1,17 @@
+#main {
+    min-height: 800px;
+}
+
+#main.content {
+    -webkit-font-smoothing: initial;
+    margin-left: 4.475rem;
+    margin-right: 4.475rem;
+}
+
+#breadcrumbs {
+    display: block;
+}
+
+#article header > p.Description::before {
+    content: "DESCRIPTION";
+}
