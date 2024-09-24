@@ -9,10 +9,33 @@ const Header = () => {
                     <a className="sidebar-title">
                         <h2>Namu</h2>
                     </a>
-                    <p></p>
+                    <p/>
                     <p>너의 머리가 부족해서야</p>
                 </div>
-                <nav></nav>
+                <nav className="sidebar-nav" role="navigation">
+                    <ul>
+                        <li>
+                            <div className="list-wrapper">
+                                <a className="sidebar-nav-item">Development</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div className="list-wrapper">
+                                <a className="sidebar-nav-item">Study</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div className="list-wrapper">
+                                <a className="sidebar-nav-item">Resume</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div className="list-wrapper">
+                                <a className="sidebar-nav-item">Tags</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
                 <div></div>
             </div>
         </header>
