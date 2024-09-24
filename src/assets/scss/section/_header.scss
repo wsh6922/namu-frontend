@@ -1,189 +1,26 @@
-#header {
-    @include header__nav--fixed;
-    display: block;
-    z-index: 72;
-}
-
-#header nav.navbar {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
-    height: 64px;
-    min-height: unset;
-    z-index: 75;
-}
-
-.navbar {
-    position: relative;
-}
-
-@media screen and (min-width: 700px) {
-    .navbar {
-        display: flex;
-        align-items: stretch;
-    }
-}
-
-#header nav.navbar .container {
-    max-width: 1440px;
-    width: 100%;
+#header .sidebar-sticky {
     height: 100%;
-    position: relative;
-    margin: 0 auto;
-    flex-grow: 1;
-    word-break: break-word;
+    padding-top: 5%;
+    position: fixed;
+    z-index: 3;
+    max-width: 21rem;
+    padding: 1.5rem;
+    contain: content;
 }
 
-#header nav.navbar .desktop_container {
-    display: block;
-    padding: 0 32px;
+#header .sidebar-sticky .sidebar-title > a {
+    color: #ffffff;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    text-shadow: rgba(0, 0, 0, 0.25) 0.1rem 0.1rem 0.15rem;
+    text-underline-offset: .35rem;
 }
 
-#header nav.navbar .desktop_container .content {
-    display: flex;
-    height: 100%;
+.sidebar-title > a {
+    touch-action: manipulation;
+    transition: color 250ms, text-decoration-color 250ms, border-color 250ms;
 }
 
-#header nav.navbar .desktop_container .content .header-logo {
-    @include flex-center;
-    margin-right: 10px;
+#sidebar-title > h2 {
+    margin: 0;
+    padding-bottom: .5rem;
 }
-
-#header nav.navbar .desktop_container .content .header-logo > a {
-    display: inline-flex;
-    align-items: center;
-    height: 100%;
-}
-
-#header nav.navbar .desktop_container .content .navbar-menu {
-    display: flex;
-    align-items: center;
-    flex: 1 1 auto;
-    margin-right: 0px;
-}
-
-#header nav.navbar .desktop_container .content .navbar-menu .navbar-menu-left {
-    display: flex;
-    height: 100%;
-}
-
-.navbar-menu-left .category_menu_content--no-list-style {
-    padding: .5rem 0;
-    font-weight: 700;
-}
-
-@media screen and (min-width: 700px) {
-    .navbar-item.is-hoverable {
-        align-items: stretch;
-    }
-}
-
-@media screen and (min-width: 700px) {
-    .navbar-item {
-        display: flex;
-        align-items: center;
-    }
-}
-
-.navbar-item {
-    position: relative;
-    flex-grow: 0;
-    flex-shrink: 0;
-    line-height: 1.5;
-}
-
-.navbar-item a {
-    padding: .5rem .75rem;
-}
-
-.navbar-item {
-    padding: .5rem .75rem;
-}
-
-.navbar-item a > span {
-    font-size: 16px;
-    font-style: normal;
-}
-
-#header nav.navbar .desktop_container .content .navbar-menu .navbar-menu-right {
-    display: flex;
-    flex: 1;
-    height: 100%;
-}
-
-#header .navbar-menu-right .search-bar {
-    padding-left: 8px;
-    padding-right: 8px;
-    flex: 1;
-    width: auto;
-}
-
-.visually-hidden {
-    @include visually-hidden
-}
-
-#header nav.navbar .desktop_container .content .navbar-menu-right .search-bar .input {
-    border-radius: 8px;
-    border: 1px solid #ced4da;
-    background: #f6f6f6;
-}
-
-.input {
-    height: auto;
-    box-shadow: none;
-    color: #5f5f5f;
-    max-width: 100%;
-    width: 100%;
-}
-
-.search-bar > input:focus {
-    outline:.04rem auto #1dc078;
-    box-shadow: 0 0 0 .125em rgba(29, 192, 120, .25);
-}
-
-#header nav.navbar .desktop_container .content .navbar-menu-right .search-bar .search__icon {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-#header nav.navbar .desktop_container .content .navbar-menu-right .search-bar .search__icon i {
-    position: absolute;
-    right: 20px;
-}
-
-#header nav.navbar .desktop_container .content .navbar-menu-right .navbar-item {
-    @include flex-center(false);
-    padding-right: 0px;
-}
-
-#header nav.navbar .buttons:last-child {
-    margin-bottom: unset;
-}
-
-#header nav.navbar .buttons {
-    @include flex-center;
-    flex-wrap: wrap;
-}
-
-#header nav.navbar .buttons .button {
-    margin-bottom: unset;
-    border: 1px solid #dbdbdb;
-    height: auto;
-    line-height: 1;
-}
-
-#header nav.navbar .buttons .space-inset-4 {
-    padding: 8px;
-}
-
-#header nav.navbar .buttons .sign-up {
-    background-color: #ff7867;
-    color: #fff;
-}
-
-.buttons .button:not(:last-child) {
-    margin-right: .5rem;
-    font-size: 20px;
-}
-
-
-

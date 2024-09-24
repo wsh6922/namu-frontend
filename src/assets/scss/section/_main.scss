@@ -1,17 +1,70 @@
-#main {
-    min-height: 800px;
+body {
+    background-color: #ffe0b2;
 }
 
-#main.content {
-    -webkit-font-smoothing: initial;
-    margin-left: 4.475rem;
-    margin-right: 4.475rem;
+.content {
+    padding: 8rem 1rem 12rem;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
 }
 
-#breadcrumbs {
-    display: block;
+.page-of_mb6 {
+    margin-bottom: 6rem;
 }
 
-#article header > p.Description::before {
-    content: "DESCRIPTION";
+#article header > .pb0 {
+    padding-bottom: 0;
 }
+
+hr, .hr {
+    border: 0;
+    margin: 1rem 0;
+    border: 1px solid #39393a;
+    transition: background-color 1s, border-color 1s;
+}
+
+#article header > .main-page-title {
+    word-break: keep-all;
+    margin-top: 0;
+}
+
+#article header {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+#article > h2 {
+    position: relative;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    transition: background-color 1s, border-color 1s;
+}
+
+@media screen and (min-width: 86em) {
+    .content {
+        padding-top: 9rem;
+        margin-left: 25rem;
+        margin-right: 4rem;
+        max-width: 54rem;
+        background-color: #A5D6A7;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .content {
+        padding-left: 1rem;
+    }
+}
+
+@media screen and (min-width: 86em) {
+    .content h1, .content .h1 {
+        font-size: 2.4rem;
+        line-height: 1.25;
+    }
+}
+

@@ -1,5 +1,5 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import MainView from "./views/MainView";
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import MainView from './views/MainView';
 
 const App = () => {
   return (
