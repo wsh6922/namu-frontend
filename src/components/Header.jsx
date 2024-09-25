@@ -36,7 +36,22 @@ const Header = () => {
                         </li>
                     </ul>
                 </nav>
-                <div></div>
+                <div className="sidebar-social">
+                    <ul>
+                        <li>
+                            <a></a>
+                        </li>
+                        <li>
+                            <a></a>
+                        </li>
+                        <li>
+                            <a></a>
+                        </li>
+                        <li>
+                            <a></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
         

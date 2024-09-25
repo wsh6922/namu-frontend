@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../icomoon/fonts/icomoon.eot?y9hcb1');
-  src:  url('../icomoon/fonts/icomoon.eot?y9hcb1#iefix') format('embedded-opentype'),
-    url('../icomoon/fonts/icomoon.ttf?y9hcb1') format('truetype'),
-    url('../icomoon/fonts/icomoon.woff?y9hcb1') format('woff'),
-    url('../icomoon/fonts/icomoon.svg?y9hcb1#icomoon') format('svg');
+  src:  url('../icomoon/fonts/icomoon.eot?1d5xpd');
+  src:  url('../icomoon/fonts/icomoon.eot?1d5xpd#iefix') format('embedded-opentype'),
+    url('../icomoon/fonts/icomoon.ttf?1d5xpd') format('truetype'),
+    url('../icomoon/fonts/icomoon.woff?1d5xpd') format('woff'),
+    url('../icomoon/fonts/icomoon.svg?1d5xpd#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,12 +13,11 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  display: inline-block;
+  speak: never;
   font-style: normal;
+  font-weight: normal;
   font-variant: normal;
-  text-rendering: auto;
   text-transform: none;
-  font-weight: 400;
   line-height: 1;
 
   /* Better Font Rendering =========== */
@@ -31,4 +30,10 @@
 }
 .icon-brightness-contrast:before {
   content: "\e9d6";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-github:before {
+  content: "\eab0";
 }
