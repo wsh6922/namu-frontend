@@ -39,16 +39,19 @@ const Header = () => {
                 <div className="sidebar-social">
                     <ul>
                         <li>
-                            <a></a>
+                            <a href="https://github.com/Thenamu" title="github" className="sidebar-social-icon">
+                                <span className="icon-github"></span>
+                            </a>
                         </li>
                         <li>
-                            <a></a>
+                            <a href="" title="instagram" className="sidebar-social-icon">
+                                <span className="icon-instagram"></span>
+                            </a>
                         </li>
                         <li>
-                            <a></a>
-                        </li>
-                        <li>
-                            <a></a>
+                            <a href="https://wsh6922.tistory.com" title="blog" className="sidebar-social-icon">
+                                <span className="icon-link"></span>
+                            </a>
                         </li>
                     </ul>
                 </div>

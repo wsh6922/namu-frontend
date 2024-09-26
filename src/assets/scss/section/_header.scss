@@ -92,3 +92,29 @@
 .list-wrapper a { 
     text-decoration-color: rgba(255, 255, 255, 0.2);
 }
+
+#header .sidebar-sticky .sidebar-social ul {
+    display: inline-block;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#header .sidebar-sticky .sidebar-social ul > li {
+    float: left;
+}
+
+#header .sidebar-sticky .sidebar-social li > .sidebar-social-icon{
+    display: inline-block;
+    text-align: center;
+    font-size: 1.4rem;
+    width: 3rem;
+    height: 4rem;
+    padding: .5rem 0;
+    line-height: 3rem;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+
