@@ -53,6 +53,11 @@ const Header = () => {
                                 <span className="icon-link"></span>
                             </a>
                         </li>
+                        <li>
+                            <a href="https://www.notion.so/3246d84a4b5949c0bd6c18005ee75557" title="notion" className="sidebar-social-icon">
+                                <span className="icon-notion"></span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

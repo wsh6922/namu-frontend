@@ -1,16 +1,17 @@
 #header {
-    position: static;
+    position: relative;
     text-align: center;
+    min-height: 100%;
 }
 
 #header .sidebar-sticky {
     height: 100%;
-    padding-top: 5%;
     position: fixed;
     z-index: 3;
     max-width: 21rem;
     padding: 1.5rem;
     contain: content;
+    padding-top: 76px;
 }
 
 #header a {
