@@ -2,3 +2,57 @@
     z-index: 3;
     background-color: #2c2c2d;
 }
+
+.flexd-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar {
+    transition: none;
+}
+
+#top_navbar .top-navbar-content {
+    position: relative;
+    padding-top: 0;
+    padding-bottom:  0;
+    min-height: 0;
+    max-height: 5rem;
+}
+
+.top-navbar-content {
+    padding: 8rem 1rem 12rem;
+}
+
+@media screen and (min-width: 672px) {
+    .top-navbar-content {
+        max-width: 42rem;
+    }
+}
+
+@media screen and (min-width: 864px) {
+    .top-navbar-content {
+        max-width: 48rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .top-navbar-content {
+        padding-left: 1rem;
+        margin-left: 24rem;
+        margin-right: 3rem;
+    }
+}
+
+@media screen and (min-width: 1376px) {
+    .top-navbar-content {
+        padding-top: 9rem;
+        margin-left: 25rem;
+        margin-right: 4rem;
+        max-width: 54rem;
+    }
+}
+
+
