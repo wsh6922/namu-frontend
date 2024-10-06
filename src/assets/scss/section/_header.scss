@@ -11,7 +11,7 @@
 }
 
 .navbar {
-    transition: none;
+    transition: background-color 1s, border-color 1s;
 }
 
 #top_navbar .top-navbar-content {
@@ -24,6 +24,69 @@
 
 .top-navbar-content {
     padding: 8rem 1rem 12rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+#top_navbar .top-navbar-content::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: calc(100% - 6rem);
+    height: 5rem;
+    left: 3rem;
+    margin: auto;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+    z-index: -1;
+    bottom: 1px;
+}
+
+.nav-button-bar {
+    margin: 0 -1rem;
+    background-color: white;
+    background-color: var(--body-bg);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: background-color 1s, border-color 1s;
+}
+
+#dark-mode {
+    font-size: 1.25rem;
+}
+
+button.nav-button {
+    cursor: pointer;
+}
+
+.nav-button-bar .nav-button { 
+    background: none;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.25rem;
+    height: 5rem;
+    color: rgba(255, 255, 255, .25);
+    border-right: 1px solid #39393a;
+    border-left: 1px solid #39393a;
+    margin-left: -1px;
+}
+
+.nav-button-bar button {
+    transition: background-color 1s, border-color 1s;
+    -webkit-appearance: button;
+    text-transform: none;
+    overflow: visible;
+    margin: 0;
+    font-family: inherit;
+    line-height: inherit;
+    touch-action: manipulation
+}
+
+button.nav-button:hover, button.nav-button:focus {
+    background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05));
 }
 
 @media screen and (min-width: 672px) {

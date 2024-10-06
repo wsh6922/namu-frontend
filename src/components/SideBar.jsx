@@ -31,7 +31,7 @@ const SideBar = () => {
                         </li>
                         <li>
                             <div className="list-wrapper">
-                                <a className="sidebar-nav-item">Tags</a>
+                                <a className="sidebar-nav-item">Books</a>
                             </div>
                         </li>
                     </ul>
