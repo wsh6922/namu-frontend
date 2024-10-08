@@ -24,6 +24,7 @@
 
 .top-navbar-content {
     padding: 8rem 1rem 12rem;
+    display:flex;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -33,17 +34,17 @@
     display: block;
     width: calc(100% - 6rem);
     height: 5rem;
-    left: 3rem;
+    left: 3.2rem;
     margin: auto;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
     z-index: -1;
     bottom: 1px;
 }
 
-.nav-button-bar {
+.nav-button-left-bar {
     margin: 0 -1rem;
     background-color: white;
-    background-color: var(--body-bg);
+    background-color: #2c2c2d;;
     height: 5rem;
     display: flex;
     align-items: center;
@@ -59,7 +60,7 @@ button.nav-button {
     cursor: pointer;
 }
 
-.nav-button-bar .nav-button { 
+.nav-button-left-bar .nav-button { 
     background: none;
     border: none;
     text-decoration: none;
@@ -70,11 +71,10 @@ button.nav-button {
     height: 5rem;
     color: rgba(255, 255, 255, .25);
     border-right: 1px solid #39393a;
-    border-left: 1px solid #39393a;
     margin-left: -1px;
 }
 
-.nav-button-bar button {
+.nav-button-left-bar button {
     transition: background-color 1s, border-color 1s;
     -webkit-appearance: button;
     text-transform: none;
@@ -82,11 +82,64 @@ button.nav-button {
     margin: 0;
     font-family: inherit;
     line-height: inherit;
-    touch-action: manipulation
+    touch-action: manipulation;
 }
 
 button.nav-button:hover, button.nav-button:focus {
     background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05));
+}
+
+#top_navbar .top-navbar-content .search-bar {
+    display: flex;
+    align-items: center;
+    padding-left: 19px;
+    width: auto;
+}
+
+#searchbar-input {
+    height: 100%;
+    padding-left: 3rem;
+    padding-right :3rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    touch-action: manipulation;
+    font-size: 1.2rem;
+    line-height: 1.75;
+    border: none;
+    background-color: #2c2c2d;
+    color:#ccc;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#searchbar-input:focus {
+    box-shadow: 0 0 0 3px rgba(255, 128, 128, 0.5);
+    outline: 0;
+}
+
+:focus {
+    outline-color: rgba(255, 128, 128) !important;
+}
+
+.nav-button-right-bar {
+    display: flex;
+    height: 24px;
+    transition: background-color 1s, border-color 1s;
+}
+
+.nav-button-right-bar .nav-button-items {
+    -webkit-appearance: button;
+    background-color: initial;
+    background-image: none;
+    border-width: 0;
+    border-style: solid;
+    border-color: rgb(102 102 102 / 1);
+    color: rgb(117, 117, 117, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .nav-button-items:hover {
+        color: rgb(255, 255, 255, 1);
+    }
 }
 
 @media screen and (min-width: 672px) {

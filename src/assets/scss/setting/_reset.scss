@@ -49,18 +49,6 @@ article {
   display: block;
 }
 
-input {
-    -webkit-appearance: none;
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 1rem;
-    padding: calc(.375em - 1px) calc(.625em - 1px);
-    line-height: 1.5;
-    vertical-align: top;
-}
-
 // 폰트 초기화
 body,
 button,
