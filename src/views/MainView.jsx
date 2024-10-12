@@ -1,7 +1,8 @@
 // import React from "react";
 import Header from "../components/Header";
 import SideBar from "../components/SideBar";
-import Main from "../components/Main";
+// import Main from "../components/Main";
+import Development from "../components/Development";
 import Footer from "../components/Footer";
 
 const MainView = () => {
@@ -9,7 +10,8 @@ const MainView = () => {
         <>
         <Header/>
         <SideBar/>
-        <Main/>
+        {/*<Main/>*/}
+        <Development/>
         <Footer/>
         </>
     );

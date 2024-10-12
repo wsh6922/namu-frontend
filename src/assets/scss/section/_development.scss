@@ -1,0 +1,91 @@
+.content-main {
+    padding: 8rem 1rem 12rem;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+#breadcrumbs > ul {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#breadcrumbs > ul {
+    height: 1rem;
+    margin: -1.5rem 0 .5rem;
+    padding: 0;
+    font-size: .667rem;
+    color: rgba(255, 255, 255, .25);
+    text-transform: uppercase;
+    width: 100%;
+    list-style: none;
+}
+
+#breadcrumbs > ul > li {
+    display: inline;
+}
+
+#article .page-title {
+    margin-top: 0;
+    word-break: keep-all;
+}
+
+#article .note-sm {
+    background: transparent;
+    color: #ccc;
+    font-size: smaller;
+    border-left: 1px solid #39393a;
+    padding: 1.2rem 1rem 0 1rem;
+    margin: 1rem -1rem;
+    position: relative;
+}
+
+#article .note-sm::before {
+    content: "Description";
+    font-size: 0.667rem;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: .025rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .25);
+    position: absolute;
+    top: 0;
+}
+
+
+@media screen and (min-width: 42em) {
+    .content-main  {
+        max-width: 42rem;
+    }
+}
+
+@media screen and (min-width: 54em) {
+    .content-main {
+        max-width: 48rem;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .content-main  {
+        padding-left: 1rem;
+        margin-left: 24rem;
+        margin-right: 3rem;
+    }
+}
+
+@media screen and (min-width: 86em) {
+    .content-main  {
+        padding-top: 9rem;
+        margin-left: 25rem;
+        margin-right: 4rem;
+        max-width: 54rem;
+        background-color: #A5D6A7;
+    }
+}
+
+@media screen and (min-width: 86em) {
+    .content-main h1{
+        font-size: 2.4rem;
+        line-height: 1.25;
+    }
+}
