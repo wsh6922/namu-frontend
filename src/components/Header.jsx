@@ -20,15 +20,15 @@ const Header = () => {
                 { isLoggedIn ? (
                     <>
                         <button type="button" className="nav-button-items">
-                            로그아웃
+                            Sign out
                         </button>
                         <button type="button" className="nav-button-items">
-                            글쓰기
+                            Writing
                         </button>
                     </>
                 ) : (
                         <button type="button" className="nav-button-items">
-                            로그인
+                            Sign in
                         </button>
                 )}
             </div>

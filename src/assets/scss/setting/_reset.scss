@@ -65,6 +65,7 @@ a:hover,
 a:focus {
   cursor: pointer;
   text-decoration: none;
+  touch-action: manipulation;
 }
 
 // 스타일 초기화
