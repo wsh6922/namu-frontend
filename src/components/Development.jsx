@@ -15,13 +15,14 @@ const Development = () => {
                     <h1 className="page-title">Development</h1>
                     <p className="note-sm">get to know the development</p>
                 </header>
-                <div>
-                    <div>
-                        <article>
-                            <a>
-                                <div>
+                <h2 id="year">2024</h2>
+                <div className="columns">
+                    <div className="columns-1-2">
+                        <article className="project-card">
+                            <a className="flip-project no-hover">
+                                <div className="project-card-img">
                                     <a>
-                                        <img/>
+                                        <img style={{opacity: 0}}/>
                                     </a>
                                 </div>
                             </a>

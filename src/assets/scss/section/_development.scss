@@ -52,6 +52,103 @@
     top: 0;
 }
 
+@media screen and (min-width: 42em) {
+    .columns {
+        margin-left: -2rem;
+        margin-right: -2rem;
+    }
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    contain: content;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    padding-right: 1rem;
+}
+
+.columns-1-2 {
+    float: left;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+}
+
+.project-card {
+    width: 100%;
+    color: rgba(255, 255, 255, .625);
+    background-color: #39393a;
+    padding-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0.125rem 0.125rem 1rem rgba(0, 0, 0, 0.2);
+    contain: content;
+    border-radius: .5rem;
+    page-break-inside: avoid;
+    transition: transform 500ms ease;
+    will-change: transform;
+}
+
+.project-card .flip-project {
+    display: block;
+}
+
+.flip-project:focus {
+    outline: none !important;
+}
+
+.columns a:hover {
+    transition: color 50ms, text-decoration-color 50ms, border-color 50ms;
+}
+
+.columns a.no-hover {
+    border-bottom: none;
+    text-decoration-thickness: unset;
+    text-underline-offset: unset;
+}
+
+.columns a {
+    transition: color 250ms, text-decoration-color 250ms, border-color 250ms;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px;
+    color: #ccc;
+}
+
+.project-card div.project-card-img {
+    margin-bottom: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-card div.project-card-img::before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+div.project-card-img > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.project-card-img > a {
+    z-index: 1;
+    text-decoration-color: rgba(255, 128, 128, 0.5);
+    border-color: rgba(255, 128, 128, 0.5);
+}
+
+@media screen and (min-width: 42em) {
+    .columns-1-2 {
+        width: 50%;
+    }
+}
 
 @media screen and (min-width: 42em) {
     .content-main  {
