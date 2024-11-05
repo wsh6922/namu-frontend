@@ -25,6 +25,11 @@
     display: inline;
 }
 
+#breadcrumbs > ul > li > a {
+    transition: color 250ms, text-decoration-color 250ms, border-color 250ms;
+    color: rgba(255, 255, 255, .5);
+}
+
 #article .page-title {
     margin-top: 0;
     word-break: keep-all;

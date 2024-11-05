@@ -5,8 +5,8 @@ const Development = () => {
                 <ul>
                     <li><a>home</a></li>
                     <li>
-                        <span> / </span>
-                        <span>development</span>
+                        <span>&nbsp;/&nbsp;</span>
+                        <a>development</a>
                     </li>
                 </ul>
             </nav>

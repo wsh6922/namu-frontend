@@ -1,0 +1,140 @@
+.content-main {
+    padding: 8rem 1rem 12rem;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+#breadcrumbs > ul {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#breadcrumbs > ul {
+    height: 1rem;
+    margin: -1.5rem 0 .5rem;
+    padding: 0;
+    font-size: .667rem;
+    color: rgba(255, 255, 255, .25);
+    text-transform: uppercase;
+    width: 100%;
+    list-style: none;
+}
+
+#breadcrumbs > ul > li {
+    display: inline;
+}
+
+#breadcrumbs > ul > li > a {
+    transition: color 250ms, text-decoration-color 250ms, border-color 250ms;
+    color: rgba(255, 255, 255, .5);
+}
+
+.page-of_mb6 {
+    margin-bottom: 6rem;
+}
+
+.page-of_mb6 .post-date {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.post-date {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -.6rem;
+    height: 2rem;
+    margin-bottom: .85rem;
+    color: rgba(255, 255, 255, .5);
+    font-size: 1.08rem;
+    line-height: 1.6;
+}
+
+#article header .post-date .ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+#article header .ellipsis .flip-title {
+    transition: color 250ms, text-decoration-color 250ms, border-color 250ms;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-underline-offset: .35rem;
+    text-decoration-thickness: 2px;
+    color: #ccc;
+    text-decoration-color: rgba(255, 128, 128, 0.5);
+    border-color: rgba(255, 128, 128, 0.5);
+}
+
+#article header .ellipsis .flip-title:hover {
+    text-decoration-color: rgb(255, 128, 128);
+    border-color: rgb(255, 128, 128);
+    color: 50ms, text-decoration-color 50ms, border-color 50ms;
+}
+
+#article header .about {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+#article header .about .author {
+    margin-top: 4rem;
+}
+
+#article header .about .author .hr-bottom {
+    border-bottom: 1px solid #39393a;
+    padding-bottom: .75rem;
+    margin-bottom: 1rem;
+    transition: background-color 1s, border-color 1s;
+}
+
+.hr-bottom {
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+@media screen and (min-width: 42em) {
+    .columns-1-2 {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 42em) {
+    .content-main  {
+        max-width: 42rem;
+    }
+}
+
+@media screen and (min-width: 54em) {
+    .content-main {
+        max-width: 48rem;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .content-main  {
+        padding-left: 1rem;
+        margin-left: 24rem;
+        margin-right: 3rem;
+    }
+}
+
+@media screen and (min-width: 86em) {
+    .content-main  {
+        padding-top: 9rem;
+        margin-left: 25rem;
+        margin-right: 4rem;
+        max-width: 54rem;
+        background-color: #A5D6A7;
+    }
+}
+
+@media screen and (min-width: 86em) {
+    .content-main h1{
+        font-size: 2.4rem;
+        line-height: 1.25;
+    }
+}
