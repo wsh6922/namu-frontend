@@ -139,6 +139,23 @@
     clear: both;
 }
 
+aside .author p > strong > a {
+    color: #ccc;
+    text-decoration: underline;
+    transition: color 250ms, text-decoration-color 250ms, border-color 250ms;
+    text-decoration-color: rgba(255, 128, 128, 0.5);
+    border-color: rgba(255, 128, 128, 0.5);
+    text-decoration-style: solid;
+    text-underline-offset: .35rem;
+    text-decoration-thickness: 2px;
+}
+
+aside .author p > strong > a:hover  {
+    transition: color 50ms, text-decoration-color 50ms, border-color 50ms;
+    text-decoration-color: rgb(255, 128, 128);
+    border-color: rgb(255, 128, 128);
+}
+
 @media screen and (min-width: 42em) {
     .columns-1-2 {
         width: 50%;
