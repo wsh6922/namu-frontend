@@ -1,9 +1,9 @@
 // import React from "react";
 import Header from "../components/Header";
 import SideBar from "../components/SideBar";
-// import Main from "../components/Main";
-// import Development from "../components/Development";
-import Content from "../components/Content";
+// import Main from "../page/Main";
+// import Development from "../page/Development";
+import Content from "../page/Content";
 import Footer from "../components/Footer";
 
 const MainView = () => {
