@@ -1,4 +1,4 @@
-const Development = () => {
+const Blog = () => {
     return (
         <main id="development-main" className="content-main" role="main">
             <nav id="breadcrumbs" className="screen-only">
@@ -6,14 +6,14 @@ const Development = () => {
                     <li><a>home</a></li>
                     <li>
                         <span>&nbsp;/&nbsp;</span>
-                        <a>development</a>
+                        <a>Blog</a>
                     </li>
                 </ul>
             </nav>
             <article id="article" className="page-of_mb6" role="article">
                 <header>
-                    <h1 className="page-title">Development</h1>
-                    <p className="note-sm">get to know the development</p>
+                    <h1 className="page-title">Blog</h1>
+                    <p className="note-sm">get to know the Blog</p>
                 </header>
                 <h2 id="year">2024</h2>
                 <div className="columns">
@@ -42,4 +42,4 @@ const Development = () => {
     );
 };
 
-export default Development;
+export default Blog;

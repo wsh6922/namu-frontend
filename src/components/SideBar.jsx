@@ -16,12 +16,12 @@ const SideBar = () => {
                     <ul>
                         <li>
                             <div className="list-wrapper">
-                                <a className="sidebar-nav-item">Development</a>
+                                <a className="sidebar-nav-item">Blog</a>
                             </div>
                         </li>
                         <li>
                             <div className="list-wrapper">
-                                <a className="sidebar-nav-item">Study</a>
+                                <a className="sidebar-nav-item">Books</a>
                             </div>
                         </li>
                         <li>
@@ -31,7 +31,7 @@ const SideBar = () => {
                         </li>
                         <li>
                             <div className="list-wrapper">
-                                <a className="sidebar-nav-item">Books</a>
+                                <a className="sidebar-nav-item">Releases</a>
                             </div>
                         </li>
                     </ul>

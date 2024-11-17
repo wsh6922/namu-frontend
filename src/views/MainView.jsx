@@ -2,8 +2,8 @@
 import Header from "../components/Header";
 import SideBar from "../components/SideBar";
 // import Main from "../page/Main";
-// import Development from "../page/Development";
-import Content from "../page/Content";
+import Blog from "../page/Blog";
+// import Content from "../page/Content";
 import Footer from "../components/Footer";
 
 const MainView = () => {
@@ -12,8 +12,8 @@ const MainView = () => {
         <Header/>
         <SideBar/>
         {/*<Main/>*/}
-        {/* <Development/> */}
-        <Content/>
+        <Blog/>
+        {/* <Content/> */}
         <Footer/>
         </>
     );
