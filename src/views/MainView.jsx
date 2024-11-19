@@ -12,7 +12,7 @@ const MainView = () => {
         <>
         {/* <Header/> */}
         {/* <SideBar/> */}
-        {/*<Main/>*/}
+        {/* <Main/> */}
         {/* <Blog/> */}
         {/* <Content/> */}
         {/* <Footer/> */}

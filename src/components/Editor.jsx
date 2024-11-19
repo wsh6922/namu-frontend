@@ -6,7 +6,7 @@ import { useState, useMemo, useRef } from 'react';
 
 Quill.register('modules/imageResize', ImageResize);
 
-export default function Editor() {
+export default function Editor(props) {
     const quillRef = useRef();
 
     const [content, setContent] = useState('');
@@ -41,7 +41,7 @@ export default function Editor() {
             toolbar: {
                 container: [
                     ['image'],
-                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }, { 'size': ['small', false, 'large', 'huge'] }],
+                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }, { 'size': ['small', false, 'large'] }],
                     ['bold', 'italic', 'underline', 'strike'],
                     [{ 'color': [] }, { 'background': [] }],
                     [{ 'align': [] }],
@@ -77,7 +77,8 @@ export default function Editor() {
         'clean'
     ]
 
-    const handleChange = e => {
+    const handleContentChange = e => {
+        props.onContentChange(e)
         setContent(e);
     }
 
@@ -88,7 +89,7 @@ export default function Editor() {
                 formats={format}
                 modules={modules}
                 value={content}
-                onChange={handleChange}
+                onChange={handleContentChange}
             />
         </>
     );
