@@ -1,0 +1,50 @@
+#head.namu_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+#head.namu_head > h3 {
+    margin-top: 24px;
+    margin-left: 60px;
+}
+
+#head.namu_head .name_head {
+    display: flex;
+}
+
+#head.namu_head .name_head > p {
+    margin: 0;
+    margin-right: 104px;
+    font-size: 13px;
+}
+
+.btn_category {
+    display: block;
+    width: 860px;
+    height: 30px;
+    margin: 46px auto 0;
+    position: relative;
+}
+
+.writer_title {
+    width: 860px;
+    margin: 18px auto 17px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+
+.textarea {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 30px;
+    color: #202020;
+    resize: none;
+    outline: 0 none;
+    line-height: 40px;
+    overflow: hidden;
+    letter-spacing: -0.4px;
+}

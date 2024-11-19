@@ -1,7 +1,7 @@
-import ReactQuill, { Quill } from 'react-quill';
-import ImageResize from 'quill-image-resize';
+import ReactQuill, { Quill } from "react-quill";
+import ImageResize from "quill-image-resize";
 import 'react-quill/dist/quill.snow.css';
-import QuillMarkdown from 'quilljs-markdown';
+// import QuillMarkdown from 'quilljs-markdown';
 import { useState, useMemo, useRef } from 'react';
 
 Quill.register('modules/imageResize', ImageResize);
@@ -22,16 +22,16 @@ export default function Editor() {
             const formData = new FormData();
             formData.append('image', file);
 
-            try {
-                const result = await axiosPostNewImage(formData)
-                const imageUrl = result.data.data;
-                const editor = quillRef.current.getEditor();
-                const range = editor.getSeletion();
-                editor.inserEmbed(range.index, 'image', imageUrl);
-            } catch (e) {
-                console.log(e);
-                alert("이미지 업로드에 실패했습니다.")
-            }
+            // try {
+            //     const result = await axiosPostNewImage(formData)
+            //     const imageUrl = result.data.data;
+            //     const editor = quillRef.current.getEditor();
+            //     const range = editor.getSeletion();
+            //     editor.inserEmbed(range.index, 'image', imageUrl);
+            // } catch (e) {
+            //     console.log(e);
+            //     alert("이미지 업로드에 실패했습니다.")
+            // }
         })
     }
 
@@ -40,24 +40,24 @@ export default function Editor() {
         return {
             toolbar: {
                 container: [
+                    ['image'],
                     [{ 'header': [1, 2, 3, 4, 5, 6, false] }, { 'size': ['small', false, 'large', 'huge'] }],
                     ['bold', 'italic', 'underline', 'strike'],
+                    [{ 'color': [] }, { 'background': [] }],
+                    [{ 'align': [] }],
                     ['blockquote', 'code-block'],
                     [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '-1' }, { 'indent': '+1' }],
-                    [{ 'align': [] }],
-                    ['image'],
-                    [{ 'color': [] }, { 'background': [] }],
                     ['clean']
                 ],
                 handlers: {
                     image: imageUploadHandler,
                 },
             },
-            markdownOptions: {},
-            ImageResize: {
+            // markdownOptions: {},
+            imageResize: {
                 parchment: Quill.import('parchment'),
-                modules: ['Resize', 'Toolbar']
-            }
+                modules: ['Resize', 'Toolbar'],
+            },
         }
     }, [])
 
