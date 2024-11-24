@@ -54,7 +54,7 @@ const SideBar = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.notion.so/3246d84a4b5949c0bd6c18005ee75557" title="notion" className="sidebar-social-icon">
+                            <a href="https://thenamu.notion.site" title="notion" className="sidebar-social-icon">
                                 <span className="icon-notion"></span>
                             </a>
                         </li>

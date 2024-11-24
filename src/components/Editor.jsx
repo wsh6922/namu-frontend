@@ -1,3 +1,4 @@
+import axios from 'axios';
 import ReactQuill, { Quill } from "react-quill";
 import ImageResize from "quill-image-resize";
 import 'react-quill/dist/quill.snow.css';
@@ -11,6 +12,16 @@ export default function Editor(props) {
 
     const [content, setContent] = useState('');
 
+    const axiosNewPostImage = async (formData) => {
+        const response = await axios.post("/api/image/test", formData, {
+            timeout: 30000,
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        });
+        return response;
+    }
+
     const imageUploadHandler = async () => {
         const input = document.createElement('input');
         input.setAttribute('type', 'file');
@@ -22,16 +33,16 @@ export default function Editor(props) {
             const formData = new FormData();
             formData.append('image', file);
 
-            // try {
-            //     const result = await axiosPostNewImage(formData)
-            //     const imageUrl = result.data.data;
-            //     const editor = quillRef.current.getEditor();
-            //     const range = editor.getSeletion();
-            //     editor.inserEmbed(range.index, 'image', imageUrl);
-            // } catch (e) {
-            //     console.log(e);
-            //     alert("이미지 업로드에 실패했습니다.")
-            // }
+            try {
+                const result = await axiosNewPostImage(formData)
+                const imageUrl = result.data.data;
+                const editor = quillRef.current.getEditor();
+                const range = editor.getSelection();
+                editor.insertEmbed(range.index, 'image', imageUrl);
+            } catch (e) {
+                console.log(e);
+                alert("이미지 업로드에 실패했습니다.")
+            }
         })
     }
 
