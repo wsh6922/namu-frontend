@@ -1,11 +1,13 @@
 import axios from 'axios';
 import Editor from "../components/Editor";
 import { useState } from "react";
+import CategoryDropdown from '../components/CategoryDropdown';
 
 export default function Writer() {
 
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
+    const [boardId, setBoardId] = useState('');
     const [posting, setPosting] = useState(false);
 
     const axiosNewPost = async (formData) => {
@@ -25,6 +27,7 @@ export default function Writer() {
             const formData = new FormData();
             formData.append("title", title);
             formData.append("content", content);
+            formData.append("boardId", boardId);
 
             await axiosNewPost(formData);
             console.log('Post successfully register');
@@ -43,6 +46,10 @@ export default function Writer() {
         setContent(e);
     }
 
+    const onBoardChange = e => {
+        setBoardId(e);
+    }
+
     return (
         <div>
             <div id="head" role="banner" className="namu_head">
@@ -52,14 +59,12 @@ export default function Writer() {
                 </div>
             </div>
             <div className="category">
-                <select className="btn_category">
-                    <option value={""}>카테고리</option>
-                </select>
+                <CategoryDropdown setBoardId={onBoardChange}/>
             </div>
             <div className="writer_title">
                 <textarea className="textarea" placeholder="제목을 입력하세요" onChange={(e) => onTitleChange(e.target.value)}></textarea>
             </div>
-            <Editor onContentChange={onContentChange}></Editor>
+            <Editor onContentChange={onContentChange}/>
             {!posting ?
                 <div className="content-footer">
                     <button className="btn" onClick={submit}>완료</button>
