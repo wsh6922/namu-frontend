@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Editor from "../components/Editor";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CategoryDropdown from '../components/CategoryDropdown';
 
 export default function Writer() {
@@ -9,9 +9,10 @@ export default function Writer() {
     const [content, setContent] = useState('');
     const [boardId, setBoardId] = useState('');
     const [posting, setPosting] = useState(false);
+    const [thumbnailImage, setThumbnailImage] = useState('');
 
     const axiosNewPost = async (formData) => {
-        const response = await axios.post("", formData, {
+        const response = await axios.post("/api/post/create", formData, {
             timeout: 30000,
             headers: {
                 'Content-Type': 'multipart/form-data'
@@ -28,6 +29,7 @@ export default function Writer() {
             formData.append("title", title);
             formData.append("content", content);
             formData.append("boardId", boardId);
+            formData.append("thumbnailImage", thumbnailImage);
 
             await axiosNewPost(formData);
             console.log('Post successfully register');
@@ -50,6 +52,16 @@ export default function Writer() {
         setBoardId(e);
     }
 
+    const onThumbnailImageHandler = imageUrls => {
+        if (imageUrls && imageUrls.length > 0) {
+            setThumbnailImage(imageUrls[0]);
+        }
+    }
+
+    useEffect(() => {
+        console.log('썸네일 이미지 Url:', thumbnailImage)
+    }, [thumbnailImage]);
+
     return (
         <div>
             <div id="head" role="banner" className="namu_head">
@@ -64,7 +76,7 @@ export default function Writer() {
             <div className="writer_title">
                 <textarea className="textarea" placeholder="제목을 입력하세요" onChange={(e) => onTitleChange(e.target.value)}></textarea>
             </div>
-            <Editor onContentChange={onContentChange}/>
+            <Editor onContentChange={onContentChange} onThumbnailImageUpload={onThumbnailImageHandler} />
             {!posting ?
                 <div className="content-footer">
                     <button className="btn" onClick={submit}>완료</button>

@@ -3,14 +3,17 @@ import ReactQuill, { Quill } from "react-quill";
 import ImageResize from "quill-image-resize";
 import 'react-quill/dist/quill.snow.css';
 // import QuillMarkdown from 'quilljs-markdown';
-import { useState, useMemo, useRef } from 'react';
+import { useState, useMemo, useRef, useEffect, useCallback } from 'react';
+
 
 Quill.register('modules/imageResize', ImageResize);
 
 export default function Editor(props) {
-    const quillRef = useRef();
 
+    const quillRef = useRef();
+    const { onContentChange } = props;
     const [content, setContent] = useState('');
+    const [imageUrls, setImageUrls] = useState([]);
 
     const axiosNewPostImage = async (formData) => {
         const response = await axios.post("/api/image/test", formData, {
@@ -39,6 +42,16 @@ export default function Editor(props) {
                 const editor = quillRef.current.getEditor();
                 const range = editor.getSelection();
                 editor.insertEmbed(range.index, 'image', imageUrl);
+
+                setImageUrls(prevUrls => {
+                    const updatedImageUrls = [...prevUrls, imageUrl];
+
+                    if (props.onThumbnailImageUpload) {
+                        props.onThumbnailImageUpload(updatedImageUrls);
+                    }
+                    
+                    return updatedImageUrls;
+                });
             } catch (e) {
                 console.log(e);
                 alert("이미지 업로드에 실패했습니다.")
@@ -88,10 +101,14 @@ export default function Editor(props) {
         'clean'
     ]
 
-    const handleContentChange = e => {
-        props.onContentChange(e)
+    useEffect(() => {
+        console.log('현재 이미지 URLs:', imageUrls);
+    }, [imageUrls]);
+
+    const handleContentChange = useCallback((e) => {
         setContent(e);
-    }
+        onContentChange(e);
+    }, [onContentChange]);
 
     return (
         <>
@@ -104,4 +121,4 @@ export default function Editor(props) {
             />
         </>
     );
-}  
+}
