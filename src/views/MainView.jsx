@@ -5,7 +5,9 @@
 // import Blog from "../page/Blog";
 // import Content from "../page/Content";
 // import Footer from "../components/Footer";
-import Writer from "../page/Writer";
+// import Writer from "../page/Writer";
+
+import Login from "../page/Login";
 
 const MainView = () => {
     return (
@@ -16,7 +18,8 @@ const MainView = () => {
         {/* <Blog/> */}
         {/* <Content/> */}
         {/* <Footer/> */}
-        <Writer/>
+        {/* <Writer/> */}
+        <Login/>
         </>
     );
 };

@@ -1,0 +1,146 @@
+.login {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 4.5rem 1rem;
+    width: 22.5rem;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-gap {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.login-mb {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    display: flex;
+    gap: 0.25rem;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.login-h2 {
+    -webkit-tap-highlight-color: transparent;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.625rem;
+    line-height: 1.35;
+    margin: 0px;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.login-id {
+    line-height: 1.5;
+}
+
+.login-label {
+    display: inline-block;
+    font-weight: 500;
+    color: rgb(33, 37, 41);
+    word-break: break-word;
+    cursor: default;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 16px;
+}
+
+.login-wrapper {
+    margin-top: calc(0.3125rem);
+    position: relative;
+}
+
+.login-input {
+    height: 3.125rem;
+    -webkit-tap-highlight-color: transparent;
+    line-height: calc(3rem);
+    appearance: none;
+    resize: none;
+    box-sizing: border-box;
+    font-size: 1.125rem;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    display: block;
+    text-align: left;
+    border: 0.0625rem solid rgb(206, 212, 218);
+    background-color: rgb(255, 255, 255);
+    transition: border-color 100ms;
+    min-height: 3.125rem;
+    padding-left: calc(1.04167rem);
+    padding-right: calc(1.04167rem);
+    border-radius: 0.5rem;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.login-input:focus {
+    border-color: rgb(250, 82, 82);
+    box-shadow: rgb(250, 82, 82) 0px 0px 0px 1px;
+}
+
+.login-lh {
+    line-height: 1.5;
+}
+
+.login-password {
+    display: flex;
+    gap: 0.3125rem;
+    flex-direction: column;
+}
+
+.login-button {
+    -webkit-appearance: button;
+    padding: 0px 1.625rem;
+    appearance: none;
+    text-align: left;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 3.125rem;
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    position: relative;
+    line-height: 1;
+    font-size: 1.125rem;
+    user-select: none;
+    cursor: pointer;
+    border: 0.0625rem solid transparent;
+    background-color: rgb(0, 196, 113);
+    color: rgb(255, 255, 255);
+}
+
+.login-button-inner {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.login-span {
+    white-space: nowrap;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
