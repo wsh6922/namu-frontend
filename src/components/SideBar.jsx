@@ -1,4 +1,5 @@
 // import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SideBar = () => {
     
@@ -6,9 +7,9 @@ const SideBar = () => {
         <header id="header">
             <div className="sidebar-sticky no-fouc" style={{opacity: "1"}}>
                 <div className="sidebar-about">
-                    <a className="sidebar-title">
+                    <Link to="/" className="sidebar-title">
                         <h2>Namu</h2>
-                    </a>
+                    </Link>
                     <p/>
                     <p>너의 머리가 부족해서야</p>
                 </div>
@@ -16,22 +17,22 @@ const SideBar = () => {
                     <ul>
                         <li>
                             <div className="list-wrapper">
-                                <a className="sidebar-nav-item">Blog</a>
+                                <Link to ="/Blog" className="sidebar-nav-item">Blog</Link>
                             </div>
                         </li>
                         <li>
                             <div className="list-wrapper">
-                                <a className="sidebar-nav-item">Books</a>
+                                <Link to ="/Books" className="sidebar-nav-item">Books</Link>
                             </div>
                         </li>
                         <li>
                             <div className="list-wrapper">
-                                <a className="sidebar-nav-item">Resume</a>
+                                <Link to="/Resume" className="sidebar-nav-item">Resume</Link>
                             </div>
                         </li>
                         <li>
                             <div className="list-wrapper">
-                                <a className="sidebar-nav-item">Releases</a>
+                                <Link to="/Releases" className="sidebar-nav-item">Releases</Link>
                             </div>
                         </li>
                     </ul>

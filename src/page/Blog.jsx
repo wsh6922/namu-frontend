@@ -1,6 +1,23 @@
+import { useState, useEffect } from 'react';
+
 const Blog = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        setIsVisible(true);
+    }, []);
+
     return (
-        <main id="development-main" className="content-main" role="main">
+        <main 
+            id="development-main" 
+            className={`content-main ${isVisible ? 'reveal-animation' : ''}`}
+            role="main"
+            style={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? 'translateY(0)' : 'translateY(-50px)',
+                transition: 'all 1s ease-out'
+            }}
+        >
             <nav id="breadcrumbs" className="screen-only">
                 <ul>
                     <li><a>home</a></li>
@@ -22,15 +39,17 @@ const Blog = () => {
                             <a className="flip-project no-hover">
                                 <div className="project-card-img">
                                     <a>
-                                        <img sizes="(min-width:86em)27.5rem, (min-width:54em)24.5rem, (min-width:42em)21.5rem, 42rem"
+                                        <img 
+                                            sizes="(min-width:86em)27.5rem, (min-width:54em)24.5rem, (min-width:42em)21.5rem, 42rem"
                                             width="864"
                                             height="486"
                                             loading="lazy"
-                                            style={{ opacity: 0 }} />
+                                            style={{ opacity: 0 }} 
+                                        />
                                     </a>
                                 </div>
                             </a>
-                            <h3 className = "project-card-title">
+                            <h3 className="project-card-title">
                                 <a>Test</a>
                             </h3>
                             <a className="fill-card" tabIndex="-1"></a>
