@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -36,7 +37,7 @@ const Blog = () => {
                 <div className="columns">
                     <div className="columns-1-2">
                         <article className="project-card">
-                            <a className="flip-project no-hover">
+                            <Link to="/Content" className="flip-project no-hover">
                                 <div className="project-card-img">
                                     <a>
                                         <img 
@@ -48,7 +49,7 @@ const Blog = () => {
                                         />
                                     </a>
                                 </div>
-                            </a>
+                            </Link>
                             <h3 className="project-card-title">
                                 <a>Test</a>
                             </h3>

@@ -30,7 +30,7 @@ hr, .hr {
 
 #article header {
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 #article > h2 {
@@ -43,6 +43,24 @@ p {
     margin-top: 0;
     margin-bottom: 1rem;
     transition: background-color 1s, border-color 1s;
+}
+
+.main-line > a {
+    text-decoration-style: solid;
+    text-underline-offset: .35rem;
+    text-decoration-thickness: 2px;
+    text-decoration: underline;
+    transition: color 250ms, text-decoration-color 250ms, border-color 250ms;
+    text-decoration-color: rgba(255, 128, 128, 0.5);
+    border-color: rgba(255, 128, 128, 0.5);
+    color: #ccc;
+    font-weight: 700;
+}
+
+.main-line > a:hover {
+    transition: color 50ms, text-decoration-color 50ms, border-color 50ms;
+    text-decoration-color: rgb(255, 128, 128);
+    border-color: rgb(255, 128, 128);
 }
 
 @media screen and (min-width: 86em) {

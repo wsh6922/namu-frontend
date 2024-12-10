@@ -1,8 +1,24 @@
-const Development = () => {
+import { useState, useEffect } from 'react';
 
+
+const Development = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        setIsVisible(true);
+    }, []);
 
     return (
-        <main id="development-main" className="content-main" role="main">
+        <main 
+            id="development-main" 
+            className={`content-main ${isVisible ? 'reveal-animation' : ''}`}
+            role="main"
+            style={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? 'translateY(0)' : 'translateY(-50px)',
+                transition: 'all 1s ease-out'
+            }}
+        >
             <nav id="breadcrumbs" className="screen-only">
                 <ul>
                     <li><a>home</a></li>

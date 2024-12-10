@@ -1,5 +1,6 @@
 // import React from "react";
-import { useState } from "react";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -18,7 +19,7 @@ const Header = () => {
             </div>
             <div className="nav-button-right-bar">
                 { isLoggedIn ? (
-                    <>
+                    <>  
                         <button type="button" className="nav-button-items">
                             Sign out
                         </button>
@@ -26,10 +27,12 @@ const Header = () => {
                             Writing
                         </button>
                     </>
-                ) : (
+                ) : (   
+                    <Link to="/Login">
                         <button type="button" className="nav-button-items">
                             Sign in
                         </button>
+                    </Link>    
                 )}
             </div>
         </div>
