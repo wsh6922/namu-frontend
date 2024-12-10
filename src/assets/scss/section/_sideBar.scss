@@ -5,6 +5,7 @@
 }
 
 #header .sidebar-sticky {
+    background-color: #2c2c2d;
     height: 100%;
     position: fixed;
     z-index: 3;
@@ -30,6 +31,10 @@
 #header .sidebar-about .sidebar-title > h2 {
     margin: 0;
     padding-bottom: .5rem;
+}
+
+#header .sidebar-about > p {
+    color: #ffffff;
 }
 
 #header .sidebar-title > h2 {
