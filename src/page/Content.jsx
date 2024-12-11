@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 
 const Development = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -51,7 +51,7 @@ const Development = () => {
                                 배움에서 그치지 않고 학습한 지식을 <strong>Github</strong>와 <strong>기술 블로그</strong>를<br />
                                 통해 체계적으로 <strong>기록</strong>하고 <strong>공유</strong>하고 있습니다.<br />
                                 꾸준한 기록의 <strong>가치</strong>를 믿으며, 지속적으로 성장하고자 합니다.<br />
-                                저에 대한 자세한 내용은 <strong><a href="">이력서</a></strong>와 <strong><a href="">포트폴리오</a></strong>에서 확인하실 수 있습니다!
+                                저에 대한 자세한 내용은 <strong><Link to="/Resume">이력서</Link></strong>와 <strong><a href="https://github.com/Thenamu">포트폴리오</a></strong>에서 확인하실 수 있습니다!
                             </p>
                             <div className="sidebar-social">
                                 <ul>

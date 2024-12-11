@@ -1,4 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 // import MainView from './views/MainView';
 import Main from './page/Main';
 import Header from './components/Header';
@@ -15,8 +16,21 @@ const App = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === '/Login';
 
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+      })
+    }, [pathname])
+    return null;
+  }
+
   return (
     <>
+      <ScrollToTop />
       {!isLoginPage && <Header />}
       {!isLoginPage && <SideBar />}
       <Routes>

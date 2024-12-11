@@ -1,10 +1,10 @@
 // import React from "react";
-import { useState } from 'react';
+import { useAuthStore } from '../stores/store';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
 
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const { isLogin, setIsLogin } = useAuthStore();
 
     return (
     <div id="top_navbar" className="navbar flexd-top" style={{transform: 'translateY(0px)'}}>
@@ -18,7 +18,7 @@ const Header = () => {
                 <input id="searchbar-input" type="text" placeholder="입력하세요"></input>
             </div>
             <div className="nav-button-right-bar">
-                { isLoggedIn ? (
+                { isLogin ? (
                     <>  
                         <button type="button" className="nav-button-items">
                             Sign out
@@ -32,7 +32,7 @@ const Header = () => {
                         <button type="button" className="nav-button-items">
                             Sign in
                         </button>
-                    </Link>    
+                    </Link>
                 )}
             </div>
         </div>
