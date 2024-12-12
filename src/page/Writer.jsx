@@ -2,6 +2,7 @@ import axios from 'axios';
 import Editor from "../components/Editor";
 import { useState, useEffect } from "react";
 import CategoryDropdown from '../components/CategoryDropdown';
+import { Link } from 'react-router-dom';
 
 export default function Writer() {
 
@@ -63,9 +64,9 @@ export default function Writer() {
     }, [thumbnailImage]);
 
     return (
-        <div>
+        <div style={{background: '#ffffff'}}>
             <div id="head" role="banner" className="namu_head">
-                <h3>Thenamu</h3>
+                <h3><Link to="/" className="cb">Thenamu</Link></h3>
                 <div className="name_head">
                     <p>namu</p>
                 </div>

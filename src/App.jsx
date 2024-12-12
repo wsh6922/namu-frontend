@@ -10,18 +10,20 @@ import Footer from './components/Footer';
 import Releases from './page/Releases';
 import Content from './page/Content';
 import Login from './page/Login';
+import Writer from './page/Writer'; 
 
 const App = () => {
 
   const location = useLocation();
   const isLoginPage = location.pathname === '/Login';
+  const isWriterPage = location.pathname === '/Writer';
 
   const ScrollToTop = () => {
     const { pathname } = useLocation();
     useEffect(() => {
       window.scrollTo({
         top: 0,
-        left: 0,
+        left: 0, 
         behavior: "smooth"
       })
     }, [pathname])
@@ -31,8 +33,8 @@ const App = () => {
   return (
     <>
       <ScrollToTop />
-      {!isLoginPage && <Header />}
-      {!isLoginPage && <SideBar />}
+      {!isLoginPage && !isWriterPage && <Header />}
+      {!isLoginPage && !isWriterPage && <SideBar />}
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/Blog" element={<Blog />} />
@@ -41,8 +43,9 @@ const App = () => {
         <Route path="/Releases" element={<Releases />} />
         <Route path="/Content" element={<Content />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Writer" element={<Writer/>} />
       </Routes>
-      {!isLoginPage && <Footer />}
+      {!isLoginPage && !isWriterPage && <Footer />}
     </>
   );
 };

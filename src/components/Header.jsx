@@ -23,9 +23,11 @@ const Header = () => {
                         <button type="button" className="nav-button-items">
                             Sign out
                         </button>
-                        <button type="button" className="nav-button-items">
-                            Writing
-                        </button>
+                        <Link to="/Writer">
+                            <button type="button" className="nav-button-items">
+                                Writing
+                            </button>
+                        </Link>
                     </>
                 ) : (   
                     <Link to="/Login">
