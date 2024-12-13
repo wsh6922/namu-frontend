@@ -11,7 +11,7 @@ export default function UserProfileLoader () {
 
     const unAuthenticate = () => {
         setIsLogin(false);
-        setUserInfo({ id: null, userId: null, name: null,})
+        setUserInfo({ id: null, userId: null, name: null })
     };
 
     const axiosUserProfile = async () => {
@@ -33,6 +33,7 @@ export default function UserProfileLoader () {
                     setIsLogin(true);
                     console.log(isLogin);
                     const { id, userId, name } = response.data.data;
+                    console.log(id, userId, name);
                     setUserInfo({ id, userId, name });
                     console.log(userInfo);
                 } else {

@@ -1,8 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const Blog = () => {
     const [isVisible, setIsVisible] = useState(false);
+
+    const axiosBlogPost = async (id) => {
+        const response = axios.get("/api/post/read", {
+            params: { id }
+        });
+        return response;
+    }
 
     useEffect(() => {
         setIsVisible(true);
