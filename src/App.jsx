@@ -10,7 +10,8 @@ import Footer from './components/Footer';
 import Releases from './page/Releases';
 import Content from './page/Content';
 import Login from './page/Login';
-import Writer from './page/Writer'; 
+import Writer from './page/Writer';
+import UserProfileLoader from './api/UserProfileLoader'; 
 
 const App = () => {
 
@@ -32,6 +33,7 @@ const App = () => {
 
   return (
     <>
+      <UserProfileLoader/>
       <ScrollToTop />
       {!isLoginPage && !isWriterPage && <Header />}
       {!isLoginPage && !isWriterPage && <SideBar />}

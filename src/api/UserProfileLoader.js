@@ -1,11 +1,13 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useAuthStore, useUserInfoStore } from "../stores/store";
+import { useLocation } from "react-router-dom";
 
 export default function UserProfileLoader () {
 
     const { isLogin, setIsLogin } = useAuthStore();
     const { userInfo, setUserInfo } = useUserInfoStore();
+    const location = useLocation();
 
     const unAuthenticate = () => {
         setIsLogin(false);
@@ -34,6 +36,7 @@ export default function UserProfileLoader () {
                     setUserInfo({ id, userId, name });
                     console.log(userInfo);
                 } else {
+                    console.log('login yet');
                     unAuthenticate();
                 }
             } catch (error) {
@@ -42,5 +45,5 @@ export default function UserProfileLoader () {
             }
         }
         fetchUserProfile();
-    }, [])
+    }, [location.pathname])
 }
