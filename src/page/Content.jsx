@@ -1,12 +1,41 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import DOMPurify from 'dompurify';
+import axios from 'axios';
 
-const Development = () => {
+const Content = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const { id } = useParams();
+    const [post, setPost] = useState(null);
+
+
+    const axiosOnePost = async (id) => {
+        const response = await axios.get("/api/post/read-one", {
+            params: { id },
+        });
+
+        return response;
+    }
+
+    const fetchOnePost = async (id) => {
+        try {
+            const response = await axiosOnePost(id);
+            if (response.status == 200) {
+                setPost(response.data.data);
+            }
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    }
 
     useEffect(() => {
         setIsVisible(true);
     }, []);
+
+    useEffect(() => {
+        fetchOnePost(id);
+    }, [id]);
 
     return (
         <main 
@@ -21,26 +50,24 @@ const Development = () => {
         >
             <nav id="breadcrumbs" className="screen-only">
                 <ul>
-                    <li><a>home</a></li>
+                    <li><Link to="/">home</Link></li>
                     <li>
                         <span>&nbsp;/&nbsp;</span>
-                        <a>development</a>
+                        <Link to={`/${post?.board.boardName}`}>{post?.board.boardName}</Link>
                     </li>
                 </ul>
             </nav>
             <article id="article" className="page-of_mb6" role="article">
                 <header>
-                    <h1 className="page-title">Development</h1>
+                    <h1 className="page-title">{post?.title}</h1>
                     <div className="post-date">
                         <span className="ellipsis">
-                            <time dateTime="">Test</time>&nbsp;in&nbsp;
-                            <a className="flip-title">Test</a>
+                            <time dateTime="">{post?.user.name}</time>&nbsp;in&nbsp;
+                            <Link to={`/${post?.board.boardName}`}className="flip-title">{post?.board.boardName}</Link>
                             <span></span>
                         </span>
                     </div>
-                    <div>
-
-                    </div>
+                    <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post?.content)}}></div>
                     <aside className="about" role="complementary">
                         <div className="author">
                             <h2 className="page-title hr-bottom">
@@ -85,4 +112,4 @@ const Development = () => {
     );
 };
 
-export default Development;
+export default Content;

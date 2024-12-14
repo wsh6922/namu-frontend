@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-const Resume = () => {
+const Resume = ({ type }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -20,10 +21,10 @@ const Resume = () => {
         >
             <nav id="breadcrumbs" className="screen-only">
                 <ul>
-                    <li><a>home</a></li>
+                    <li><Link to="/">home</Link></li>
                     <li>
                         <span>&nbsp;/&nbsp;</span>
-                        <a>Resume</a>
+                        <a>{type}</a>
                     </li>
                 </ul>
             </nav>

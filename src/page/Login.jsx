@@ -34,6 +34,7 @@ export default function Login() {
                 } 
             } catch (error) {
                 console.error(error);
+                throw error;
             }
         }
     }

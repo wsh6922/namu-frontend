@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-const Releases = () => {
+const Releases = ({ type }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -20,16 +21,16 @@ const Releases = () => {
         >
             <nav id="breadcrumbs" className="screen-only">
                 <ul>
-                    <li><a>home</a></li>
+                    <li><Link to="/">home</Link></li>
                     <li>
                         <span>&nbsp;/&nbsp;</span>
-                        <a>Releases</a>
+                        <a>{type}</a>
                     </li>
                 </ul>
             </nav>
             <article id="article" className="page-of_mb6" role="article">
                 <header>
-                    <h1 className="page-title Releases-title">Releases</h1>
+                    <h1 className="page-title Releases-title">{type}</h1>
                     <p className="sub-title">v1.0.0</p>
                     <div className="hr pb0"></div>
                 </header>

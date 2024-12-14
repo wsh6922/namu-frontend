@@ -11,7 +11,7 @@ import Releases from './page/Releases';
 import Content from './page/Content';
 import Login from './page/Login';
 import Writer from './page/Writer';
-import UserProfileLoader from './api/UserProfileLoader'; 
+import UserProfileLoader from './api/UserProfileLoader';
 
 const App = () => {
 
@@ -24,7 +24,7 @@ const App = () => {
     useEffect(() => {
       window.scrollTo({
         top: 0,
-        left: 0, 
+        left: 0,
         behavior: "smooth"
       })
     }, [pathname])
@@ -33,19 +33,19 @@ const App = () => {
 
   return (
     <>
-      <UserProfileLoader/>
+      <UserProfileLoader />
       <ScrollToTop />
       {!isLoginPage && !isWriterPage && <Header />}
       {!isLoginPage && !isWriterPage && <SideBar />}
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/Blog" element={<Blog />} />
-        <Route path="/Books" element={<Blog />} />
-        <Route path="/Resume" element={<Resume />} />
-        <Route path="/Releases" element={<Releases />} />
-        <Route path="/Content" element={<Content />} />
+        <Route path="/Blog" element={<Blog type="Blog" id={1} />} />
+        <Route path="/Books" element={<Blog type="Books" id={2} />} />
+        <Route path="/Resume" element={<Resume type="Resume" />} />
+        <Route path="/Releases" element={<Releases type="Releases" />} />
+        <Route path="/Content/:id" element={<Content />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/Writer" element={<Writer/>} />
+        <Route path="/Writer" element={<Writer />} />
       </Routes>
       {!isLoginPage && !isWriterPage && <Footer />}
     </>
